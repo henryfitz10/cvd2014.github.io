@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Spotify search app</title>
+	<style type="text/css">
+		.inlist{
+			height: 50px;
+			width:50px;
+		}
+
+	</style>
+</head>
+<body>
+		<form id="searchForm" action='' method='push'>
+			<fieldset>
+			<legend>Artist Data</legend>
+			Artist Name:
+			<input type="text" value="Artist" required>
+			</fieldset>
+			<input type='submit' value='Search'>
+		</form>
+
+
+		<h1></h1>
+		<h2 id="ArtistData"></h2>
+		<select id="searchResults">
+			<option>--Artists--</option>
+		</select>
+
+		<h2 id="AlbumData"></h2>
+		
+		<select id="albumResults">
+			<option>--Albums--</option>
+		</select>
+			
+		<img id='CoverArt' src=""><br>
+		<h2 id="trackData"></h2>
+		<select id="trackResults">
+			<option>--Tracks--</option>>
+		</select>
+		<p>Click on a track to hear a short sample!</p>
+
+		<iframe src="" width='300' height='80'></iframe>
+
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	function to_HMS(seconds){
+		var numminutes = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
+		var numseconds =(((seconds % 31536000) % 86400) % 3600) % 60;
+		numseconds=numseconds.toPrecision(2);
+		return numminutes + " minutes " + numseconds + " seconds";
+	}
+	
+
+	$('#searchForm').on('click', function(e){
+		e.preventDefault();
+		$('iframe').attr("src","");
+		$('iframe').hide()
+
+		//get data from form and create api search
+		var artistName= $("#searchForm input").val();
+		var oChoices=[];
+		var oAlbums=[];
+		var oTracks=[];
+
+		var spotify_url ="https://api.spotify.com/v1/search?type=artist&query="+artistName;
+		//console.log(spotify_url);
+		var albumUrl=""
+
+		$.ajax({
+			url:spotify_url,
+			dataType:"json",
+			
+			//check if artist exists
+			success:function(dataArtist){
+				var listArtist="<option>"+'Default'+"</option>";
+				
+				for (i in dataArtist.artists.items){
+					Name= dataArtist.artists.items[i].name;
+					Artistid=dataArtist.artists.items[i].id;
+					listArtist+="<option  value='"+Artistid+"'>"+Name+"</option>"
+					oChoices[i]={Name:Artistid};
+				}
+				//console.log(oChoices);
+				$('#searchResults')
+					.html(listArtist)
+					
+				$('#ArtistData')
+					.text("There are "+oChoices.length+" artists matching your search.")
+				$('#searchResults').on('change',function(e){
+					var indexName=this.selectedIndex;
+					var options= this.options;
+					var name=$(options[indexName]);
+					var ID=this.value
+					var ChosenName=this.text
+					//console.log(name)
+					//console.log(ID)
+					albumUrl="https://api.spotify.com/v1/artists/"+ID+"/albums"
+					console.log(albumUrl)
+					$.ajax({
+						url:albumUrl,
+						dataType:"json",
+						success:function(dataAlbum){
+							var listAlbum="<option>"+'Default'+"</option>"
+							for (i in dataAlbum.items){
+								albumName = dataAlbum.items[i].name;
+								//console.log(albumName)
+								albumId = dataAlbum.items[i].id;
+								//console.log(albumId)
+								album_thumbnail=dataAlbum.items[i].images[2].url
+								album_image=dataAlbum.items[i].images[1].url
+
+								listAlbum+="<option value='"+albumId+"'>"+albumName+"<img src='"+album_thumbnail+"'/></option>"
+								oAlbums[i]={albumName:album_image};
+								
+							}
+								number_Albums=oAlbums.length;
+								$('#albumResults')
+									.html(listAlbum)
+								$('#AlbumData')
+									.text(number_Albums+" albums available for play.")
+								$('#albumResults').on('change',function(e){
+									var albumName=this.selectedIndex;
+									var options= this.options;
+									var name=$(options[albumName]);
+									var AlbumID=this.value
+									var albumArt=this.image
+									//console.log(name)
+									//console.log(ID)
+									tracksUrl="https://api.spotify.com/v1/albums/"+AlbumID+"/tracks"
+									$('#CoverArt').attr('src',albumArt);
+									//console.log(tracksUrl)
+									$.ajax({
+									url:tracksUrl,
+									dataType:'json',
+									success:function(dataTracks){
+										var listTracks="<option>"+"Default"+"</option>"
+										for (i in dataTracks.items){
+											var trackName=dataTracks.items[i].name;
+											
+											var trackLength=to_HMS(dataTracks.items[i].duration_ms/1000)
+											
+											var	trackPreview=dataTracks.items[i].preview_url;
+											listTracks+="<option value='"+trackPreview+"'>"+trackName+" : "+trackLength+"</option>"
+											oTracks[i]={trackName:trackPreview}
+										}
+										number_Tracks=oTracks.length;
+										$('#trackResults')
+										.html(listTracks)
+										$('#trackData')
+										.text(number_Tracks+" tracks available for play.")
+										
+										$('#trackResults').on('change', function(e){
+											var songName=this.selectedIndex;
+											var options= this.options;
+											var name=$(options[songName]);
+											var songPreview=this.value;
+											//console.log (songPreview)
+											$('iframe').attr('src',songPreview)
+											$('iframe').show()
+										})
+									
+									}
+								})		
+							})	
+						}	
+					})
+				})
+			}		
+		})	
+	})
+	
+</script>
+
+</body>
+
+</html>
