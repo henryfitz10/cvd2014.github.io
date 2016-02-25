@@ -63,8 +63,9 @@
 		var oChoices=[];
 		var oAlbums=[];
 		var oTracks=[];
-
+		var limit=75;
 		var spotify_url ="https://api.spotify.com/v1/search?type=artist&query="+artistName;
+		spotify_url+='&limit'=limit;
 		//console.log(spotify_url);
 		var albumUrl=""
 
