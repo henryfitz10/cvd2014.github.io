@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html>
+<head>
+	<meta charset ="UTC-8">
+	<title>Admin Page</title>
+	
+	<!--CSSlinks-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/membersHomepage.css">
+
+</head>
+<body>
+	<header class='container'>
+		<h2 id="greeting"> Welcome UserName</h2>
+		<nav class='row'>
+				<ul class='nav nav-pills nav-justified col-sm-6'>
+				<li><a href='membersHomepage.html'>Calender</a></li>
+				<li><a href="acr.html">eACR ePCR</a></li>
+        		<li><a href="PersonalData.html">My Data</a></li>
+				<li><a href="trainingResources.html">Training Resources</a></li>
+				<li class='hidden'><a href="#">Email</a></li>
+				<li onclick="logout()"><a href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class='container'>
+		<div class='row'>
+			<div class='col-sm-12'>
+				<h2>DUTY HOURS</h2>
+				<div id="dutyChart"></div>
+			</div>
+			<div class="col-sm-12">
+				<h2>Money Owed</h2>
+				<div id="moneyChart"></div>
+			</div>
+		</div>
+		<div class='row'>
+			<article class="col-sm-4">
+				<h2>Instructors</h2>
+				<ul class="instructors"></ul>
+			</article>
+			<article class="col-sm-4">
+				<h2>Demonstrators</h2>
+				<ul class="demonstrators"></ul>
+			</article>
+			<article class="col-sm-4" >
+				<h2>Get member data</h2>
+				<form  id="searchForm" method="post" name="search">
+        			<input type="text" name="Name" id="Name"></input><br>
+        			<input type="button" value="Search" id="submit">
+        		</form>
+        		<ul id='memberData'></ul>
+
+			</article>
+		</div>
+	</section>
+
+	
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	<script src="js/PersonalData.js"></script>
+	<script src="js/logout.js"></script>
+	<script src="js/memberSearch.js"></script>
+	<script src="js/filter.js"></script>
+	<script src="js/ChartingData.js"></script>
+
+</body>
+</html>

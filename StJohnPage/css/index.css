@@ -1,0 +1,66 @@
+.container{
+	width:100%;
+}
+
+.carousel-inner> .item > img{
+	height:520px;
+	margin:auto;
+	width:80%;
+}
+#mainContent{
+	width:100%;
+}
+
+ .thought-box{
+ 	height:75px;
+ 	border:1px solid black;
+ }
+ .thought-box>p{
+ 	margin:auto;
+ }
+
+
+footer{
+	height:250px;
+}
+
+.messageUs{
+	height:100%;
+	padding:0;
+	margin:0;
+	text-align: center;
+	font-family: garamond;
+
+}
+.trainingVids{
+	width:100%;
+	height:200px;
+}
+
+.twitter-timeline{
+	height:100%;
+	padding:0;
+	margin:0;
+}
+
+#map{
+	height: 250px;
+	width:100%;
+}
+nav
+{
+	background-color: #F5F5f5;
+}
+.nav-pills> li.active>a{
+	color:#fff;
+	background-color:#000;
+}
+
+.nav-pills>li>a .hover{
+	background-color: #
+}
+
+.nav-pills>li>a{
+	color:#000;
+}
+

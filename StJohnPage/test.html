@@ -1,0 +1,41 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test ajax</title>
+</head>
+<body>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script>
+        var file = 'MembersData.json'
+        var personal=[];
+        var duty=[];
+        var training=[];
+        var account=[];
+        $.ajax({
+            url: file,
+            dataType:"json",
+            
+            success: function(Data) {
+            //console.log(Data)
+            $.each(Data, function(key, oPerson){
+                //console.log(key);
+                //console.log(oPerson);
+                name=oPerson.Name;
+                pin=oPerson.StJohnPIN.toString();
+                console.log(name+":"+pin)
+                //personal[name]=[]
+
+
+                });  
+            //console.log(loginData) */ 
+        }
+
+    });
+          
+    </script>
+</body>
+</html>
+
+

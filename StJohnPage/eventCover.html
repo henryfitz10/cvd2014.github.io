@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTC-8'>
+	<title>St John Ambulance Walkinstown</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+	
+	<script src="js/maps.js"></script>
+	<script src="js/twitter.js"></script>
+	<script src="js/login_validate.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?callback=initMap"
+	async defer></script>
+	
+</head>
+<body>
+<header class='container'>
+	<nav class="row">
+	    	<ul class="nav nav-pills nav-justified col-sm-4">
+     		<li class="active"><a href="#">Home</a></li>
+      		<li><a href="eventCover.html">Event Cover</a></li>
+          	<li><a href="training.html">Training</a></li>
+          
+      		 
+      		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+        		<span class="caret"></span></a>
+
+        		<form class="dropdown-menu" id="login" method="post" name="memberLogin">
+        			Username:<br>
+        			<input type="text" name="username" id="username"></input><br>
+        			Password:<br>
+        			<input type="password" name="password" id="password"></input><br>
+        			<input type="button" value="Login" id="submit" onclick="login_validate()">
+        		</form>
+        	</li>
+    	</ul>
+    </div>
+  </nav>
+</header>
+
+
+<section class="container">	
+  <div id="MyCarousel" class="carousel slide" data-ride="carousel">
+	<!--Indicators-->
+	<ol class="carousel-indicators">
+		<li data-target="#MyCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#MyCarousel" data-slide-to="1"></li>
+		<li data-target="#MyCarousel" data-slide-to="2"></li>
+		<li data-target="#MyCarousel" data-slide-to="3"></li>
+		<li data-target="#MyCarousel" data-slide-to="4"></li>
+	</ol>
+
+	<!--slide wrapper-->
+	<div class="carousel-inner" >
+		<figure class="item active">
+			<img src="img\cycle.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\rainyduty.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\hike1.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\ambulance.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\March.jpg">
+		</figure>
+	</div><!--close slide wrapper-->	
+
+	<!--controls-->
+	<a class='carousel-control left' href='#MyCarousel' role='button' data-slide='prev'>	
+	</a>
+
+	<a class='carousel-control right' href='#MyCarousel' role='button' data-slide='next'>
+	</a>
+  <section class='container'>
+  	<div class='row'>
+  	<article>
+  	  <div class='col-sm-8'>
+  		<h2 > Tradition, Service, Friendship</h2>
+  		<p> One of the longest serving divisions in Dublin, Walkinstown Drimnagh Castle has a proud history of serving the people of Dublin. Many former members have moved into important roles in St. John Headquarters leaving behind a well structued, 			motivated and enthusiastic young division eager to build on its traditions. Taking members from a wide catchment area, the Senior and Cadet divisons work cosely leading to a large number of cadets making the successful transition to the senior 	division. We meet every Friday night from 8-10pm and our trianing covers a wide variety of topics ranging from basic first aid to advanced EMT skills as well as specialist topics. </p>
+  		<p>Our members are very active at both local and national public duties showing off their skill at events as varies as: American Football, Leinster Rugby, Croke Park concerts and matches , Marathons, run, Triatholons and many many more. Lorem ipsum 	 dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	  </div>	
+  	</article>
+ 	<div class='col-sm-4'>
+ 		<h4>Resources</h4>
+ 		<iframe class='trainingVids' src="https://www.youtube.com/embed/videoseries?list=PLLeZPevnJV54jhjDA6qkSAcvsBwEWkxPG"></iframe>
+ 		<article class= 'thought-box '>
+ 		<p>
+ 			<strong>Thought of the Day:</strong><br>
+			If its wet, sticky or not yours; <em>WEAR GLOVES</em>
+			</p>
+		</article>
+		<h5>Some Useful Links</h5>
+		<ul id="links">
+			<li>St John Ireland</li>
+			<li>Irish Heart Foundation</li>
+			<li>Asthma Ireland</li>
+			<li>Epilepsy Ireland</li>
+		</ul>
+ 	</div>
+
+ 	
+  </div></section>	
+  
+  <footer class='container'>
+   <div class='row'>
+
+ 	<div class="col-sm-4">
+ 		<div id='map'></div>
+ 	</div>
+
+ 	<div class="col-sm-4" >
+		<a class="twitter-timeline" href="https://twitter.com/SjWalkinstown" data-widget-id="702421041998667777">Tweets by @SjWalkinstown</a>
+
+ 	</div>
+
+ 	<div class="col-sm-4 ">
+ 		<h5><strong>Send e-mail to Walkinstown Divison:</strong></h5>
+		<form  class='mesageUs' action="MAILTO:ciaran.darcy@stjohn.ie" method="post" enctype="text/plain">
+			Name:<br>
+			<input type="text" name="name" value="your name"><br>
+			E-mail:<br>
+			<input type="text" name="mail" value="your email"><br>
+			I want to enquire about:
+			<select>
+				<option>----------</option>
+				<option>Event Cover</option>
+				<option>Training</option>
+				<option>Joining the division</option>
+			</select>
+			
+			<textarea rows='3' cols='35'></textarea><br>
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset">
+		</form>
+ 	</div>
+   </div>
+  </footer>
+
+
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js\bootstrap.js"></script>
+</body>
+</html>
