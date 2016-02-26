@@ -13,7 +13,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : 13,
+    "DutyHours" : 56,
     "Email" : "ciaran.darcy@stjohn.ie",
     "Phone" : 353857218389,
     "password" : "welcome"
@@ -127,7 +127,7 @@
     "Demonstrator" : 0,
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -165,7 +165,7 @@
     "Demonstrator" : "",
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -203,7 +203,7 @@
     "Demonstrator" : "",
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -260,7 +260,7 @@
     "Demonstrator" : "",
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -279,12 +279,12 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
   },
-  "Emily O’Brien" :   {
+  "Emily O'Brien" :   {
     "Name" : "Emily O’Brien",
     "username" : "eobrien",
     "Admin" : 0,
@@ -336,7 +336,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -360,7 +360,7 @@
     "Phone" : "",
     "password" : "welcome"
   },
-  "Victoria O’Donnell" :   {
+  "Victoria O'Donnell" :   {
     "Name" : "Victoria O’Donnell",
     "username" : "vodonnell",
     "Admin" : 0,
@@ -379,7 +379,7 @@
     "Phone" : "353868146044",
     "password" : "welcome"
   },
-  "Craig O’Hara" :   {
+  "Craig O'Hara" :   {
     "Name" : "Craig O’Hara",
     "username" : "cohara",
     "Admin" : 0,
@@ -431,7 +431,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -469,7 +469,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 5,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -488,7 +488,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 0,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"

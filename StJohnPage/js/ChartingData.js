@@ -55,7 +55,7 @@ $.ajax({
                     .attr("transform","translate("+ margin.left +"," + margin.bottom   + ")")
 
 
-        console.log(dutyHours)
+        //console.log(dutyHours)
         var margin  =   {top:50, right:0,  bottom:50, left:50}, 
         canvasWidth = 1000 + margin.right +margin.left; 
         canvasHeight = 300 + margin.top + margin.bottom; 
@@ -94,9 +94,23 @@ $.ajax({
                     .attr("height",300)                                   
                     .attr("style","background-color:#ddd")  /*  added   some    style*/                                     
                     .attr("transform","translate("+ margin.left +"," + margin.bottom   + ")")
-       
 
+        var totalhours=0;
+        var moneyowed=0
+
+        for (i=0; i<dutyHours.length;i++){
+            totalhours=totalhours+dutyHours[i];
+            //console.log(totalhours)
+        } 
+                   
+       $("#totalHours").text("The division has: "+totalhours+" duty hours to date")
+
+       for (i=0; i<MoneyOwed.length;i++){
+            moneyowed=moneyowed+MoneyOwed[i];
             
-        
+        } 
+                   
+       $("#totalOwed").text("The division is owed: "+moneyowed+" euro from members.")
+
     }
 })    
