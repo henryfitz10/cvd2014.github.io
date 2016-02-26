@@ -51,7 +51,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 45,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -70,7 +70,7 @@
     "Demonstrator" : 1,
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 17,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -89,7 +89,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 22,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -108,7 +108,7 @@
     "Demonstrator" : 0,
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 34,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -146,7 +146,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 5,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -184,7 +184,7 @@
     "Demonstrator" : 1,
     "Instructor" : "no",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 14,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -222,7 +222,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 6,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -241,7 +241,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 34,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -298,7 +298,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" :4,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -317,7 +317,7 @@
     "Demonstrator" : 1,
     "Instructor" : 1,
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 19,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -355,7 +355,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" :7,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -374,9 +374,9 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
-    "Email" : "",
-    "Phone" : "",
+    "DutyHours" : 13,
+    "Email" : "Victoria.odonnell@gmail.com",
+    "Phone" : "353868146044",
     "password" : "welcome"
   },
   "Craig O’Hara" :   {
@@ -393,7 +393,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 7,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -412,7 +412,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 8,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
@@ -450,7 +450,7 @@
     "Demonstrator" : "",
     "Instructor" : "",
     "CPP" : true,
-    "DutyHours" : "",
+    "DutyHours" : 5,
     "Email" : "",
     "Phone" : "",
     "password" : "welcome"
